@@ -1,0 +1,164 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=0.9">
+    <title>Sign In</title>
+
+
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap" rel="stylesheet">
+
+
+    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="style2.css">
+    <script defer src="script.js"></script>
+</head>
+<body>
+
+<!-- 🔽 Navbar Start -->
+<div class="header-nav">
+    <div class="logo">
+        <ul>
+            <li><img src="./images/services/logo.png" alt="Logo"></li>
+            <li>Bich Group</li>
+        </ul>
+    </div>
+
+    <div class="tongle" onclick="toggleMenu()">
+        <div class="line"></div>
+        <div class="line"></div>
+        <div class="line"></div>
+    </div>
+
+    <nav class="navbar">
+        <ul>
+            <li><a href="index.html" tabindex="1">Home</a></li>
+            <li><a href="services.html" tabindex="2">Our Services</a></li>
+            <li><a href="about.html" tabindex="3">About Us</a></li>
+            <li><a href="vacancies.html" tabindex="4">Vacancies</a></li>
+            <li><a href="contactUs.html" tabindex="5">Contact Us</a></li>
+            <li><span><a href="signin.html" class="active">Sign In</a></span></li>
+        </ul>
+    </nav>
+</div>
+<!-- 🔼 Navbar End -->
+
+<div class="signin">
+    <div class="sigcont">
+        <div class="form-wrap">
+            <h1>Sign In</h1>
+            <form onsubmit="redirectToDashboard(); return false;">
+                <div class="flex-column">
+                  <label>Username</label>
+                </div>
+                <div class="form-input">
+                  <input type="text" name="username" class="input" placeholder="Enter Your Username" required>
+                </div>
+              
+                <div class="flex-column">
+                  <label>Password</label>
+                </div>
+                <div class="form-input">
+                  <input type="password" name="password" class="input" placeholder="Enter Your Password" required>
+                </div>
+              
+                <div class="flex-row">
+                  <input type="checkbox" onclick="showpass()">
+                  <label>Show Password</label>
+                </div>
+
+                <div class="login">
+                <button type = "submit" name = "login">Login</button>
+                </div>
+
+              </form>
+              
+              <script>
+                function redirectToDashboard() {
+                  // Redirect to the dashboard page
+                  window.location.href = "dashboard.html"; // or "dashbrd.html" or your actual page
+                }
+              
+                function showpass() {
+                  var x = document.querySelector("input[name='password']");
+                  x.type = x.type === "password" ? "text" : "password";
+                }
+              </script>
+              
+
+
+                <!-- Error Message placeholder -->
+                <div class="errormsg">
+                    <p id="error-msg"></p>
+                </div>
+
+                <div class="sfooter">
+                    <p>Don't have an account? Contact us <a class="terms" href="contactUs.html">here</a>.</p>
+                </div>
+            </form>
+        </div>
+
+        <div class="form-wrap">
+            <div class="form-wrap2">
+                <div class="centered-text">
+                    <img src="./images/services/logo.png" alt="Logo">
+                    <h3>Every New Client Is A New Adventure</h3>
+                    <p>Let's Get Connected</p>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+
+<script>
+    function showpass() {
+        var x = document.getElementById("pass");
+        x.type = x.type === "password" ? "text" : "password";
+    }
+</script>
+
+<!-- 🔽 Footer Start -->
+<footer>
+    <div class="wrapper">
+        <div class="social">
+            <div class="icon">
+                <a href="https://www.facebook.com/" target="_blank">
+                    <img src="./images/icons/facebook 2.png" alt="facebook icon">
+                </a>
+                <label>Facebook</label>
+            </div>
+            <div class="icon">
+                <a href="https://www.instagram.com/" target="_blank">
+                    <img src="./images/icons/instagram 2.png" alt="instagram icon">
+                </a>
+                <label>Instagram</label>
+            </div>
+            <div class="icon">
+                <a href="https://www.twitter.com/" target="_blank">
+                    <img src="./images/icons/twitter.png" alt="x/twitter icon">
+                </a>
+                <label>Tiktok</label>
+            </div>
+            <div class="icon">
+                <a href="#">
+                    <img src="./images/icons/whatsapp 3.png" alt="whatsapp icon">
+                </a>
+                <label>WhatsApp</label>
+            </div>
+        </div>
+        <div class="links">
+            <a href="terms.html">Terms &amp; Conditions</a>
+            <a href="privacy.html">Privacy Policy</a>
+            <a href="contactUs.html">Contact Us</a>
+        </div>
+        <div class="copy">
+            <p>&copy; 2024 AGRI SOLUTIONS LTD ALL RIGHTS RESERVED</p>
+        </div>
+    </div>
+</footer>
+<!-- 🔼 Footer End -->
+
+</body>
+</html>

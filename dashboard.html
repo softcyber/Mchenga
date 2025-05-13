@@ -1,0 +1,173 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Admin Dashboard - Bich Group</title>
+  <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@100;900&display=swap" rel="stylesheet">
+  <link href="https://fonts.googleapis.com/icon?family=Material+Icons+Outlined" rel="stylesheet">
+  <link rel="stylesheet" href="style.css" />
+  <script src="https://cdn.canvasjs.com/canvasjs.min.js"></script>
+</head>
+<body>
+  <div class="grid-container">
+    <!-- Header -->
+    <header class="header">
+      <div class="menu-icon" onclick="openSidebar()">
+        <span class="material-icons-outlined">menu</span>
+      </div>
+      <div class="header-right">
+        <img src="./images/services/cm.png" alt="Admin Icon" />
+        <span>Admin Dashboard</span>
+      </div>
+    </header>
+
+    <!-- Sidebar -->
+    <aside id="sidebar">
+      <div class="sidebar-title">
+        <div class="sidebar-brand">Bich Group</div>
+        <span class="material-icons-outlined" onclick="closeSidebar()">close</span>
+      </div>
+      <ul class="sidebar-list">
+        <li class="sidebar-list-item"><a href="#">Dashboard</a></li>
+        <li class="sidebar-list-item"><a href="#">Users</a></li>
+        <li class="sidebar-list-item"><a href="#">Vacancies</a></li>
+        <li class="sidebar-list-item"><a href="#">Summary</a></li>
+        <li class="sidebar-list-item"><a href="index.html">Logout</a></li>
+      </ul>
+    </aside>
+
+    <!-- Main -->
+    <main class="user-main-container">
+      <div class="main-cards">
+        <div class="cardA">
+          <div class="card-inner"><p class="text-primary">Total Vacancies</p></div>
+          <span class="text-primary font-weight-bold">23</span>
+        </div>
+
+        <div class="cardB">
+          <div class="card-inner"><p class="text-primary">Total Resumies</p></div>
+          <span class="text-primary font-weight-bold">48</span>
+        </div>
+
+        <div class="cardC">
+          <div class="card-inner"><p class="text-primary">Total Downloads</p></div>
+          <span class="text-primary font-weight-bold">35</span>
+        </div>
+      </div>
+
+      <div class="main-dash">
+        <!-- Chart -->
+        <div class="cardE_chart">
+          <h2>Monthly Data Distribution</h2>
+          <div id="chartContainer" style="height: 370px; width: 100%;"></div>
+        </div>
+
+        <!-- Table -->
+        <div class="cardD_chart">
+          <h2>All Resumes</h2>
+          <div class="dash-table-wrapper">
+            <div class="table-scroll">
+              <table class="styled-table">
+                <thead>
+                  <tr>
+                    <th>Organization</th>
+                    <th>Username</th>
+                    <th>Date</th>
+                    <th>State</th>
+                    <th>Action</th>
+                  </tr>
+                </thead>
+                <tbody>
+                  <tr>
+                    <td>ABC Corp</td>
+                    <td>john_doe</td>
+                    <td>2025-04-11</td>
+                    <td>Available</td>
+                    <td><a class="action-btn" href="#">Download</a></td>
+                  </tr>
+                  <tr>
+                    <td>XYZ Ltd</td>
+                    <td>jane_smith</td>
+                    <td>2025-04-08</td>
+                    <td>Closed</td>
+                    <td><a class="action-btn" href="#">Download</a></td>
+                  </tr>
+                  <tr>
+                    <td>XYZ Ltd</td>
+                    <td>jane_smith</td>
+                    <td>2025-04-08</td>
+                    <td>Closed</td>
+                    <td><a class="action-btn" href="#">Download</a></td>
+                  </tr>
+                  <tr>
+                    <td>XYZ Ltd</td>
+                    <td>jane_smith</td>
+                    <td>2025-04-08</td>
+                    <td>Closed</td>
+                    <td><a class="action-btn" href="#">Download</a></td>
+                  </tr>
+                  <tr>
+                    <td>XYZ Ltd</td>
+                    <td>jane_smith</td>
+                    <td>2025-04-08</td>
+                    <td>Closed</td>
+                    <td><a class="action-btn" href="#">Download</a></td>
+                  </tr>
+                </tbody>
+              </table>
+            </div>
+          </div>
+        </div>
+      </div>
+    </main>
+  </div>
+
+  <!-- Chart Script -->
+  <script>
+    window.onload = function () {
+      var chart = new CanvasJS.Chart("chartContainer", {
+        animationEnabled: true,
+        theme: "light2",
+        axisX: { title: "Month" },
+        axisY: { title: "Records", minimum: 0 },
+        data: [
+          {
+            type: "column",
+            name: "Vacancies",
+            showInLegend: true,
+            dataPoints: [
+              { label: "2025-01", y: 5 },
+              { label: "2025-02", y: 8 },
+              { label: "2025-03", y: 10 }
+            ]
+          },
+          {
+            type: "column",
+            name: "Resumies",
+            showInLegend: true,
+            dataPoints: [
+              { label: "2025-01", y: 3 },
+              { label: "2025-02", y: 12 },
+              { label: "2025-03", y: 15 }
+            ]
+          },
+          {
+            type: "column",
+            name: "Downloads",
+            showInLegend: true,
+            dataPoints: [
+              { label: "2025-01", y: 4 },
+              { label: "2025-02", y: 6 },
+              { label: "2025-03", y: 9 }
+            ]
+          }
+        ]
+      });
+      chart.render();
+    };
+  </script>
+
+  <script src="script.js"></script>
+</body>
+</html>

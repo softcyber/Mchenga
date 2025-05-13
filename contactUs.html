@@ -1,0 +1,118 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Contact Us</title>
+    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="style2.css">
+    <script defer src="script.js"></script>
+</head>
+<body>
+
+<!-- 🔽 Navbar Start -->
+<div class="header-nav">
+    <div class="logo">
+        <ul>
+            <li><img src="./images/services/logo.png" alt="Logo"></li>
+            <li>Bich Group</li>
+        </ul>
+    </div>
+
+    <div class="tongle" onclick="toggleMenu()">
+        <div class="line"></div>
+        <div class="line"></div>
+        <div class="line"></div>
+    </div>
+
+    <nav class="navbar">
+        <ul>
+            <li><a href="index.html" tabindex="1">Home</a></li>
+            <li><a href="services.html" tabindex="2">Our Services</a></li>
+            <li><a href="about.html" tabindex="3">About Us</a></li>
+            <li><a href="vacancies.html" tabindex="4">Vacancies</a></li>
+            <li><a href="contactUs.html" class="active" tabindex="5">Contact Us</a></li>
+            <li><span><a href="signin.html">Sign In</a></span></li>
+        </ul>
+    </nav>
+</div>
+<!-- 🔼 Navbar End -->
+
+<main class="contact">
+    <h1>Contact Us</h1>
+
+    <form action="https://api.web3forms.com/submit" method="POST">
+        <input type="hidden" name="access_key" value="edadcd1f-7afe-42e8-a3a9-1eca6eef0a52">
+        <input type="text" name="Full Name" placeholder="Your Full Name" required>
+        <input type="email" name="Email" placeholder="Your Email" required>
+        <input type="text" name="Subject" placeholder="Subject" required>
+        <textarea name="Message" placeholder="Your Message" required></textarea>
+        <button type="submit">Submit</button>
+    </form>
+
+    <h2>Contact Information</h2>
+    <p>Email: <a href="mailto:bicmhrconsultants@gmail.com">bicmhrconsultants@gmail.com</a></p>
+    <p>Phone: +265 (0) 888 853 888 / +265 (0) 999 853 888</p>
+    <p>
+        Office Address:<br>
+        BICM Consultants<br>
+        PO Box 31328<br>
+        Lilongwe
+    </p>
+
+    <h2>Find Us on the Map</h2>
+    <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d15487.544837819842!2d33.76729468590515!3d-13.965378160346104!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x1921d33e9369bf8d%3A0xa207898b648fafee!2sArea%2032%2C%20Lilongwe!5e0!3m2!1sen!2smw!4v1681935519182!5m2!1sen!2smw"
+        width="90%" height="400px" style="border:0;" allowfullscreen="" loading="lazy"
+        referrerpolicy="no-referrer-when-downgrade"></iframe>
+
+    <h2>Follow Us on Social Media</h2>
+    <div class="social-media">
+        <a href="https://twitter.com" target="_blank"><img src="images/twtr.png" alt="Twitter"></a>
+        <a href="https://linkedin.com" target="_blank"><img src="images/link.png" alt="LinkedIn"></a>
+        <a href="https://instagram.com" target="_blank"><img src="images/ins.jpeg" alt="Instagram"></a>
+    </div>
+</main>
+
+<!-- 🔽 Footer Start -->
+<footer>
+    <div class="wrapper">
+        <div class="social">
+            <div class="icon">
+                <a href="https://www.facebook.com/" target="_blank">
+                    <img src="./images/icons/facebook 2.png" alt="facebook icon">
+                </a>
+                <label>Facebook</label>
+            </div>
+            <div class="icon">
+                <a href="https://www.instagram.com/" target="_blank">
+                    <img src="./images/icons/instagram 2.png" alt="instagram icon">
+                </a>
+                <label>Instagram</label>
+            </div>
+            <div class="icon">
+                <a href="https://www.twitter.com/" target="_blank">
+                    <img src="./images/icons/twitter.png" alt="x/twitter icon">
+                </a>
+                <label>Tiktok</label>
+            </div>
+            <div class="icon">
+                <a href="#">
+                    <img src="./images/icons/whatsapp 3.png" alt="whatsapp icon">
+                </a>
+                <label>WhatsApp</label>
+            </div>
+        </div>
+        <div class="links">
+            <a href="terms.html">Terms &amp; Conditions</a>
+            <a href="privacy.html">Privacy Policy</a>
+            <a href="contactUs.html">Contact Us</a>
+        </div>
+        <div class="copy">
+            <p>&copy; 2024 AGRI SOLUTIONS LTD ALL RIGHTS RESERVED</p>
+        </div>
+    </div>
+</footer>
+<!-- 🔼 Footer End -->
+
+</body>
+</html>
